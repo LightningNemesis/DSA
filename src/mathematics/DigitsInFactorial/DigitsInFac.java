@@ -21,7 +21,7 @@ class Solver {
         if (n < 0) return -1;
         if (n <= 1) return 1;
         for (int i = 2; i <= n; i++) {
-            digits += Math.log10(i); // using the formula: log10(!N) = log10(1) * log10(2) * ... log10(n)
+            digits += Math.log10(i); // using the formula: log10(!N) = log10(1) + log10(2) + ... log10(n)
         }
         return (int)digits+1;
     }
