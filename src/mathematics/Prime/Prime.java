@@ -15,7 +15,6 @@ public class Prime {
         primeOperations obj = new primeOperations();
         System.out.println(input+ " is a prime number? "+ obj.checkPrime(input));
         obj.primeFactors(input);
-
     }
 
 }
