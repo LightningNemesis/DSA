@@ -1,14 +1,14 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
-  url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/',
+  title: 'Data Structures and Algo - JAVA',
+  tagline: 'DSA is cool, unless you have less than 1 month to prepare',
+  url: 'https://LightningNemesis.github.io"',
+  baseUrl: '/Data-Structures-and-Algorithms-JAVA/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'LightningNemesis', // Usually your GitHub org/user name.
+  projectName: 'Data-Structures-and-Algorithms-JAVA', // Usually your repo name.
   themeConfig: {
     navbar: {
       title: 'My Site',
@@ -23,7 +23,7 @@ module.exports = {
           position: 'left',
           label: 'Tutorial',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
+        { to: '/blog', label: 'Blog', position: 'left' },
         {
           href: 'https://github.com/facebook/docusaurus',
           label: 'GitHub',
@@ -99,4 +99,4 @@ module.exports = {
       },
     ],
   ],
-};
+}
