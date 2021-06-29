@@ -1,0 +1,1 @@
+(self.webpackChunkdsa_docs=self.webpackChunkdsa_docs||[]).push([[262],{6077:function(s){"use strict";s.exports=JSON.parse('{"allTagsPath":"/Data-Structures-and-Algorithms-JAVA/blog/tags","slug":"hello","name":"hello","count":2,"permalink":"/Data-Structures-and-Algorithms-JAVA/blog/tags/hello"}')}}]);

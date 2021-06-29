@@ -1,0 +1,1 @@
+(self.webpackChunkdsa_docs=self.webpackChunkdsa_docs||[]).push([[970],{2055:function(e){"use strict";e.exports=JSON.parse('{"permalink":"/Data-Structures-and-Algorithms-JAVA/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":3,"previousPage":null,"nextPage":null,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
