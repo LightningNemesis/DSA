@@ -6,7 +6,7 @@
  */
 
 /*
-We use regular expression: "//s*,//s*"
+We use regular expression: "\\s*,\\s*"
 Which means, take into account infinite amount of whitespace on LEFT, followed by a COMMA, followed by infinite amount
 of whitespace on RIGHT
 Using this regular expression, we can split the input string containing elements separated by comma, into array elements.
