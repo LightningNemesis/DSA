@@ -1,5 +1,5 @@
 /**
- * WAP to print the count of distinct elem,ents in the array
+ * WAP to print the count of distinct elements in the array
  * ip: {1,10,2,3,5,5}
  * op: 5
  */
