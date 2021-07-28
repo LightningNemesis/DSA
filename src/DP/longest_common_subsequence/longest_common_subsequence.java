@@ -4,7 +4,6 @@ import DP.InputHandler;
 
 import java.io.IOException;
 import java.util.Arrays;
-import java.util.HashMap;
 
 public class longest_common_subsequence extends InputHandler {
     public static void main(String[] args) throws IOException {
@@ -12,7 +11,8 @@ public class longest_common_subsequence extends InputHandler {
         String str_1 = br.readLine();
         System.out.println("Enter string 2");
         String str_2 = br.readLine();
-        System.out.println("Largest common subsequence is: " + new memoization_solver(str_1.length(), str_2.length()).subsequence(str_1, str_2, str_1.length(), str_2.length()));
+        //System.out.println("Largest common subsequence is: " + new memoization_solver(str_1.length(), str_2.length()).subsequence(str_1, str_2, str_1.length(), str_2.length()));
+        System.out.println(new tabulation_solver().subsequence(str_1, str_2, str_1.length(), str_2.length()));
     }
 }
 
@@ -21,7 +21,7 @@ class memoization_solver {
 
     memoization_solver(int m, int n) {
         mem_arr = new int[m + 1][n + 1];
-        for(int[] r: mem_arr)
+        for (int[] r : mem_arr)
             Arrays.fill(r, -1); // Since subsequences can be min 0
     }
 
@@ -37,3 +37,33 @@ class memoization_solver {
         return mem_arr[m][n];
     }
 }
+
+class tabulation_solver {
+    int subsequence(String s1, String s2, int m, int n) {
+        int[][] tab_arr = new int[m + 1][n + 1];
+        for(int i=0; i<=n; i++){
+            tab_arr[0][i] = 0;
+        }
+        for(int i=0; i<=m; i++){
+            tab_arr[i][0] = 0;
+        }
+
+        for(int i=1; i<=m; i++){
+            for(int j=1; j<=n; j++){
+                if(s1.charAt(i-1)==s2.charAt(j-1))
+                    tab_arr[i][j] = 1+tab_arr[i-1][j-1];
+                else{
+                    tab_arr[i][j] = Math.max(tab_arr[i-1][j],tab_arr[i][j-1]);
+                }
+            }
+        }
+        for(int i[]:tab_arr){
+            for(int j: i )
+                System.out.print(j + " ");
+            System.out.println();
+        }
+        return tab_arr[m][n];
+    }
+}
+
+
