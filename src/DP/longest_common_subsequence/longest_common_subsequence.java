@@ -41,27 +41,41 @@ class memoization_solver {
 class tabulation_solver {
     int subsequence(String s1, String s2, int m, int n) {
         int[][] tab_arr = new int[m + 1][n + 1];
-        for(int i=0; i<=n; i++){
+        for (int i = 0; i <= n; i++) {
             tab_arr[0][i] = 0;
         }
-        for(int i=0; i<=m; i++){
+        for (int i = 0; i <= m; i++) {
             tab_arr[i][0] = 0;
         }
 
-        for(int i=1; i<=m; i++){
-            for(int j=1; j<=n; j++){
-                if(s1.charAt(i-1)==s2.charAt(j-1))
-                    tab_arr[i][j] = 1+tab_arr[i-1][j-1];
-                else{
-                    tab_arr[i][j] = Math.max(tab_arr[i-1][j],tab_arr[i][j-1]);
+        for (int i = 1; i <= m; i++) {
+            for (int j = 1; j <= n; j++) {
+                if (s1.charAt(i - 1) == s2.charAt(j - 1))
+                    tab_arr[i][j] = 1 + tab_arr[i - 1][j - 1];
+                else {
+                    tab_arr[i][j] = Math.max(tab_arr[i - 1][j], tab_arr[i][j - 1]);
                 }
             }
         }
-        for(int i[]:tab_arr){
-            for(int j: i )
+        for (int i[] : tab_arr) {
+            for (int j : i)
                 System.out.print(j + " ");
             System.out.println();
         }
+        int i = m, j = n;
+        String str = "";
+        while (i >= 1 && j >= 1) {
+            if (s1.charAt(i - 1) == s2.charAt(j - 1)) {
+                str = s1.charAt(i - 1) + str;
+                i--;
+                j--;
+            } else {
+                if (tab_arr[i - 1][j] > tab_arr[i][j - 1])
+                    i--;
+                else j--;
+            }
+        }
+        System.out.println(str);
         return tab_arr[m][n];
     }
 }
