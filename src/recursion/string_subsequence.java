@@ -13,6 +13,13 @@ public class string_subsequence extends InputHandler {
 }
 
 class solver{
+    /**
+     * Time Complexity: O(2^n)
+     * @param str
+     * @param curr
+     * @param i
+     * @param len
+     */
     void subsequence(String str, String curr, int i, int len){
         if(i==len){
             System.out.println(curr);

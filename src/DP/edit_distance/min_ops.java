@@ -1,4 +1,4 @@
-package DP.str_equal_min_operations;
+package DP.edit_distance;
 
 import InputHandler.InputHandler;
 
