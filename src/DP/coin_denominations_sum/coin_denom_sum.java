@@ -25,6 +25,12 @@ class Solver{
     int dp[][];
     Solver(int m, int sum){
         dp = new int[m+1][sum+1];
+        for(int i=1; i<=sum; i++){
+            dp[0][i] = 0;
+        }
+        for(int i=0; i<=m; i++){
+            dp[i][0] = 1;
+        }
     }
 
     int count_combinations_woutdp(int arr[], int m, int sum){
@@ -39,6 +45,7 @@ class Solver{
     }
 
     int count_combinations_wdp(int arr[], int m, int sum){
+
         if(dp[m][sum]==-1){
             if(sum == 0) dp[m][sum] = 1; //We have found 1 combination
             if(m==0) dp[m][sum]=0; //We don't have coins left for any other combination
